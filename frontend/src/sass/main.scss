@@ -45,13 +45,17 @@ nav {
 }
 
 .form {
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     gap: 1rem;
     padding: 2rem;
     background-color: white;
     border-radius: 3px;
     box-shadow: 1px 1px 6px 0px #646464;
+
+    &--show {
+        display: flex;
+    }
 }
 
 .form__title {

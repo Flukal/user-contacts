@@ -35,7 +35,6 @@ class ContactList extends Component {
     }
 
     showInfos = (id) => {
-        // this.setState(prevState => ({ isBoxVisible: !prevState.isBoxVisible }));
         this.setState({ 
             visibleInfo: id,
             visibleModify: ''
