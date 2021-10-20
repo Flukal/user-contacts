@@ -3,7 +3,7 @@ import { ExternalLink } from 'react-external-link';
 
 export default function contactInfos({ contact, isBoxVisible }) {
     return (
-        <div className={`contacts__infos ${isBoxVisible ? "contacts__infos--show" : ""}`}>
+        <div key={contact.id} className={`contacts__infos ${isBoxVisible ? "contacts__infos--show" : ""}`}>
             <p><b>Age:</b> {contact.age}</p>
             <p><b>Phone:</b> {contact.phone}</p>
             <p><b>Email:</b> {contact.email}</p>

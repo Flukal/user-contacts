@@ -18,7 +18,7 @@ body {
 }
 
 main {
-    max-width: 1000px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
@@ -39,6 +39,9 @@ nav {
     padding: 0 5rem;
     font-size: 2rem;
     margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
 }
 
 .form {
@@ -88,15 +91,14 @@ nav {
 }
 
 .contacts__infos {
-    display: grid;
+    display: none;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     grid-gap: 2rem 4rem;
     padding: 2rem;
     padding-bottom: 1rem;
-    display: none;
 
     &--show {
-        display: block;
+        display: grid;
     }
 }
 
