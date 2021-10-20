@@ -12,31 +12,3 @@ export default function contactInfos({ contact, isBoxVisible }) {
         </div>
     )
 }
-
-
-
-
-// import React, { Component } from 'react'
-
-// class contactPage extends Component {
-//     render() {
-//         const {name, lastName, age, phone, email, image, site, tags} = this.props
-//         console.log({name})
-//         return (
-//             <div>
-                // <div>
-                //     <p>Name: {name}</p>
-                //     <p>Last Name: </p>
-                //     <p>Age: </p>
-                //     <p>Phone: </p>
-                //     <p>Email: </p>
-                //     <p>Image: </p>
-                //     <p>Site:</p>
-                //     <p>Tags: </p>
-                // </div>
-//             </div>
-//         )
-//     }
-// }
-
-// export default contactPage
