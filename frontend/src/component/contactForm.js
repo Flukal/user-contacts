@@ -35,86 +35,92 @@ class ContactForm extends Component {
         const {name, lastName, age, phone, email, image, site, tags} = this.state
 
         return (
-            <div>
-                <form onSubmit={this.handleSubmit}>
-                    <div>
-                        <label>Name</label>
-                        <input 
-                        type="text"
-                        name="name"
-                        value={name}
-                        onChange={this.handleChange} 
+            <form onSubmit={this.handleSubmit} className="form">
+                <div className="form__box">
+                    <label className="form__label">Name</label>
+                    <input
+                    className="form__input" 
+                    type="text"
+                    name="name"
+                    value={name}
+                    onChange={this.handleChange} 
+                />
+                </div>
+                <div className="form__box">
+                    <label className="form__label">Last Name</label>
+                    <input
+                    className="form__input" 
+                    type="text"
+                    name="lastName"
+                    value={lastName}
+                    onChange={this.handleChange} 
+                />
+                </div>
+                <div className="form__box">
+                    <label className="form__label">Age</label>
+                    <input
+                    className="form__input" 
+                    type="text"
+                    name="age"
+                    value={age}
+                    onChange={this.handleChange} 
+                />
+                </div>
+                <div className="form__box">
+                    <label className="form__label">Phone</label>
+                    <input
+                    className="form__input" 
+                    type="number"
+                    name="phone"
+                    value={phone}
+                    onChange={this.handleChange} 
+                />
+                </div>
+                <div className="form__box">
+                    <label className="form__label">Email</label>
+                    <input
+                    className="form__input" 
+                    type="email"
+                    name="email"
+                    value={email}
+                    onChange={this.handleChange} 
+                />
+                </div>
+                <div className="form__box">
+                    <label className="form__label">Image</label>
+                    <input
+                    className="form__input" 
+                    type="file"
+                    name="image"
+                    alt={name}
+                    value={image}
+                    onChange={this.handleChange} 
                     />
-                    </div>
-                    <div>
-                        <label>Last Name</label>
-                        <input 
-                        type="text"
-                        name="lastName"
-                        value={lastName}
-                        onChange={this.handleChange} 
+                </div>
+                <div className="form__box">
+                    <label className="form__label">Site</label>
+                    <input
+                    className="form__input" 
+                    type="text"
+                    name="site"
+                    value={site}
+                    onChange={this.handleChange} 
                     />
-                    </div>
-                    <div>
-                        <label>Age</label>
-                        <input 
-                        type="text"
-                        name="age"
-                        value={age}
-                        onChange={this.handleChange} 
+                </div>
+                <div className="form__box">
+                    <label className="form__label">Tags</label>
+                    <input
+                    className="form__input" 
+                    type="text"
+                    name="tags"
+                    value={tags}
+                    onChange={this.handleChange} 
                     />
-                    </div>
-                    <div>
-                        <label>Phone</label>
-                        <input 
-                        type="number"
-                        name="phone"
-                        value={phone}
-                        onChange={this.handleChange} 
-                    />
-                    </div>
-                    <div>
-                        <label>Email</label>
-                        <input 
-                        type="email"
-                        name="email"
-                        value={email}
-                        onChange={this.handleChange} 
-                    />
-                    </div>
-                    <div>
-                        <label>Image</label>
-                        <input 
-                        type="file"
-                        name="image"
-                        alt={name}
-                        value={image}
-                        onChange={this.handleChange} 
-                        />
-                    </div>
-                    <div>
-                        <label>Site</label>
-                        <input 
-                        type="text"
-                        name="site"
-                        value={site}
-                        onChange={this.handleChange} 
-                        />
-                    </div>
-                    <div>
-                        <label>Tags</label>
-                        <input 
-                        type="text"
-                        name="tags"
-                        value={tags}
-                        onChange={this.handleChange} 
-                        />
-                    </div>
-                    <div>
-                        <button type="submit">Submit</button>
-                    </div>
-                </form>
-            </div>
+                </div>
+                <div>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
         )
     }
 }

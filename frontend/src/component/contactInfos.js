@@ -1,18 +1,14 @@
 import React from 'react'
 
-export default function contactPage({ contact }) {
+export default function contactInfos({ contact }) {
     return (
-        <div>
-            <div>
-                <p>Name: {contact.name}</p>
-                <p>Last Name: {contact.lastName}</p>
-                <p>Age: {contact.age}</p>
-                <p>Phone: {contact.phone}</p>
-                <p>Email: {contact.email}</p>
-                <p>Image: {contact.image}</p>
-                <p>Site: {contact.site}</p>
-                <p>Tags: {contact.tags}</p>
-            </div>
+        <div className="contacts__infos">
+            <p><b>Age:</b> {contact.age}</p>
+            <p><b>Phone:</b> {contact.phone}</p>
+            <p><b>Email:</b> {contact.email}</p>
+            <p><b>Image:</b> {contact.image}</p>
+            <p><b>Site:</b> {contact.site}</p>
+            <p><b>Tags:</b> {contact.tags}</p>
         </div>
     )
 }
