@@ -44,12 +44,21 @@ nav {
 .form {
     display: flex;
     flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: 1px 1px 6px 0px #646464;
+}
+
+.form__title {
+    flex: 0 0 100%;
 }
 
 .form__box {
     display: flex;
     flex-direction: column;
-    padding: 0 1rem 1rem;
+    flex: 1 0;
 }
 
 .contacts {
@@ -80,11 +89,15 @@ nav {
 
 .contacts__infos {
     display: grid;
-    grid-template-rows: repeat(3, max-content);
-    grid-template-columns: repeat(3, max-content);
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     grid-gap: 2rem 4rem;
     padding: 2rem;
     padding-bottom: 1rem;
+    display: none;
+
+    &--show {
+        display: block;
+    }
 }
 
 .contacts__btn {
@@ -94,12 +107,15 @@ nav {
 }
 
 .btn {
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
+    height: 30px;
+    width: 75px;
     border: none;
     color: white;
     box-shadow: 0px 0px 3px 1px #c3c3c3;
+
+    &--submit {
+        background-color: #0d3f6c;
+    }
     
     &--infos {
         background-color: lighten(#028383, 8%);

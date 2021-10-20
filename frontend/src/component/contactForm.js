@@ -36,6 +36,7 @@ class ContactForm extends Component {
 
         return (
             <form onSubmit={this.handleSubmit} className="form">
+                <h1 className="form__title">Create Contact</h1>
                 <div className="form__box">
                     <label className="form__label">Name</label>
                     <input
@@ -117,9 +118,7 @@ class ContactForm extends Component {
                     onChange={this.handleChange} 
                     />
                 </div>
-                <div>
-                    <button type="submit">Submit</button>
-                </div>
+                <button className="btn btn--submit" type="submit">Submit</button>
             </form>
         )
     }

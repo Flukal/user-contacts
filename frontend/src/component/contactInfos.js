@@ -1,13 +1,13 @@
 import React from 'react'
+import { ExternalLink } from 'react-external-link';
 
-export default function contactInfos({ contact }) {
+export default function contactInfos({ contact, isBoxVisible }) {
     return (
-        <div className="contacts__infos">
+        <div className={`contacts__infos ${isBoxVisible ? "contacts__infos--show" : ""}`}>
             <p><b>Age:</b> {contact.age}</p>
             <p><b>Phone:</b> {contact.phone}</p>
             <p><b>Email:</b> {contact.email}</p>
-            <p><b>Image:</b> {contact.image}</p>
-            <p><b>Site:</b> {contact.site}</p>
+            <p><b>Site:</b> <ExternalLink href={contact.site}>{contact.site}</ExternalLink></p>
             <p><b>Tags:</b> {contact.tags}</p>
         </div>
     )

@@ -6,7 +6,8 @@ import ContactModify from './contactModify'
 
 class ContactList extends Component {
     state = {
-        contacts: []
+        contacts: [],
+        isBoxVisible:false
     }
 
     componentDidMount() {
@@ -30,13 +31,14 @@ class ContactList extends Component {
         })
     }
 
-    hideInfos = () => {
-
+    showInfos = () => {
+        this.setState(prevState => ({ isBoxVisible: !prevState.isBoxVisible }));
     }
 
 
     render() {
         const {contacts} = this.state
+        const { isBoxVisible } = this.state;
         
         return (
             <div className="contacts">
@@ -46,11 +48,11 @@ class ContactList extends Component {
                             <img src="" alt="image" className="contacts__thumb" />
                             <h3>{contact.name} {contact.lastName}</h3> 
                             <div className="contacts__btn">
-                                <button className="btn btn--infos" type="button">Infos</button>
+                                <button className="btn btn--infos" type="button" onClick={this.showInfos}>Infos</button>
                                 <button className="btn btn--delete" type="button" onClick={(e) => this.handleDelete(contact.id, e)}>Delete</button>
                             </div>
                         </li>
-                        <ContactInfos contact={contact} />
+                        <ContactInfos isBoxVisible={isBoxVisible} contact={contact} />
                     </ul>
                 )}
             </div>
