@@ -58,7 +58,7 @@ class ContactList extends Component {
                     <ul key={contact.id} className="contacts__list">
                         <li className="contacts__user">
                             <img src="" alt="image" className="contacts__thumb" />
-                            <h3>{contact.name} {contact.lastName}</h3> 
+                            <h3>{contact.name} {contact.lastName} - {contact.id}</h3> 
                             <div className="contacts__btn">
                                 <button className="btn btn--infos" type="button" onClick={() => this.showInfos(contact.id)}>Infos</button>
                                 <button className="btn btn--edit" type="button" onClick={() => this.showModify(contact.id)}>Edit</button>
