@@ -38,7 +38,7 @@ class ContactForm extends Component {
         const {name, lastName, age, phone, email, image, site, tags} = this.state
 
         return (
-            <form onSubmit={this.handleSubmit} className="form">
+            <form onSubmit={this.handleSubmit} className="form form__create">
                 <h1 className="form__title">Create Contact</h1>
                 <div className="form__box">
                     <label className="form__label">Name</label>

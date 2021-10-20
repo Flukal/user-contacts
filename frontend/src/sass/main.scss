@@ -53,10 +53,16 @@ nav {
     border-radius: 3px;
     box-shadow: 1px 1px 6px 0px #646464;
 
+    &__create {
+        display: flex;
+    }
+
     &--show {
         display: flex;
     }
 }
+
+
 
 .form__title {
     flex: 0 0 100%;
