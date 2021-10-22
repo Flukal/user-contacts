@@ -104,77 +104,83 @@ class ContactModify extends Component {
         const {name, lastName, age, phone, email, image, site, tags, id} = this.state
 
         return (
-            <div className={`form ${this.props.isBoxVisible ? "form--show" : ""}`}>
-
-
-                <form onSubmit={(id) => {this.handleSubmit(id)}}>
-                    <div>
+            <div >
+                <form onSubmit={(id) => {this.handleSubmit(id)}} className={`form ${this.props.isBoxVisible ? "form--show" : ""}`}>
+                    <div className="form__box">
                         <label>Name </label>
                         <input 
+                        className="form__label"
                         type="text"
                         name="name"
                         value={name}
                         />
                     </div>
-                    <div>
+                    <div className="form__box">
                         <label>Last Name</label>
                         <input 
+                        className="form__label"
                         type="text"
                         name="lastName"
                         value={lastName}
                         />
                     </div>
-                    <div>
+                    <div className="form__box">
                         <label>Age</label>
                         <input 
+                        className="form__label"
                         type="text"
                         name="age"
                         value={age}
                         />
                     </div>
-                    <div>
+                    <div className="form__box">
                         <label>Phone</label>
                         <input 
+                        className="form__label"
                         type="number"
                         name="phone"
                         value={phone}
                         />
                     </div>
-                    <div>
+                    <div className="form__box">
                         <label>Email</label>
                         <input 
+                        className="form__label"
                         type="email"
                         name="email"
                         value={email}
                         />
                     </div>
-                    <div>
+                    <div className="form__box">
                         <label>Image</label>
                         <input 
+                        className="form__label"
                         type="file"
                         name="image"
                         alt={name}
                         value={image}
                         />
                     </div>
-                    <div>
+                    <div className="form__box">
                         <label>Site</label>
                         <input 
+                        className="form__label"
                         type="text"
                         name="site"
                         value={site}
                         />
                     </div>
-                    <div>
+                    <div className="form__box">
                         <label>Tags</label>
                         <input 
+                        className="form__label"
                         type="text"
                         name="tags"
                         value={tags}
                         />
                     </div>
-                    <div>
-                        <button type="submit">Submit</button>
+                    <div className="form__box">
+                        <button className="btn" type="submit">Submit</button>
                     </div>
                 </form>
             </div>

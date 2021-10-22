@@ -1,0 +1,29 @@
+// COLORs
+
+$clr-dark-blue: rgb(21, 44, 69);
+$clr-hell-blue: rgb(50, 158, 241);
+
+$clr-text: rgb(216, 235, 255);
+$clr-text-dark: rgb(96,127,148);
+
+$clr-border: rgb(45,69,94);
+
+$clr-background: $clr-dark-blue;
+$clr-btn: $clr-text-dark;
+$clr-hover-btn: $clr-text;
+$clr-icons: $clr-hell-blue;
+$clr-navbar: $clr-text;
+
+
+
+// FONTs
+
+// $font-title: Arial, Helvetica, sans-serif;
+$font-family: Arial, Helvetica, sans-serif;
+$font-clr: $clr-text;
+$font-clr-title: $clr-hell-blue;
+$font-clr-btn: $clr-hell-blue;
+$font-clr-btn-hover: $clr-dark-blue;
+$font-clr-navbar: $clr-dark-blue;
+$font-clr-link: $clr-text;
+

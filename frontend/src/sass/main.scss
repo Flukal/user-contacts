@@ -1,40 +1,22 @@
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-}
+@import './variables';
+@import './base';
 
-html { // This define 1rem = 10px
-    font-size: 62.5%;
-    min-height: 100%;
-    background-color: rgba(2, 131, 131, 5%);
-}
-
-body {
-    box-sizing: border-box;
-    color: #000921;
-}
-
-main {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-h1 {
+h1,
+h3 {
     font-size: 1.9rem;
+    color: $font-clr-title;
 }
 
 p,
 label,
 ul,
 li {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
 }
 
 nav {
-    background-color: whitesmoke;
+    background-color: $clr-navbar;
+    color: $font-clr-navbar;
     height: 40px;
     padding: 0 5rem;
     font-size: 2rem;
@@ -49,20 +31,21 @@ nav {
     flex-wrap: wrap;
     gap: 1rem;
     padding: 2rem;
-    background-color: white;
+    background-color: $clr-background;
     border-radius: 3px;
-    box-shadow: 1px 1px 6px 0px #646464;
+    // box-shadow: 1px 1px 6px 0px #646464;
 
     &__create {
         display: flex;
+        border: 2px solid $clr-border;
     }
 
     &--show {
         display: flex;
+        border: 2px solid #2d455e;
+        border-top: none;
     }
 }
-
-
 
 .form__title {
     flex: 0 0 100%;
@@ -71,6 +54,7 @@ nav {
 .form__box {
     display: flex;
     flex-direction: column;
+    gap: .5rem;
     flex: 1 0;
 }
 
@@ -80,16 +64,15 @@ nav {
 
 .contacts__list {
     margin-bottom: 2rem;
-    background-color: white;
     border-radius: 3px;
-    box-shadow: 1px 1px 6px 0px #646464;
 }
 
 .contacts__user {
     height: 70px;
     display: grid;
-    grid-template-columns: 10% 70% 20%;
+    grid-template-columns: 10% 50% 40%;
     align-items: center;
+    border: 2px solid $clr-border;
     padding: 0 2rem;
 }
 
@@ -109,31 +92,52 @@ nav {
 
     &--show {
         display: grid;
+        border: 2px solid $clr-border;
+        border-top: none;
+    }
+
+    b {
+        color: $font-clr-title;
+    }
+
+    a {
+        color: $font-clr-link;
     }
 }
 
-.contacts__btn {
+.contacts__details {
     display: flex;
     justify-content: flex-end;
-    gap: 1rem;
+    gap: 2rem;
+}
+
+.link {
+    color: inherit;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: end;
+    gap: .5rem;
+    padding: .7rem 0;
+    cursor: pointer;
+
+    svg {
+        fill: $clr-icons;
+    }
 }
 
 .btn {
     height: 30px;
     width: 75px;
     border: none;
-    color: white;
-    box-shadow: 0px 0px 3px 1px #c3c3c3;
+    color: $font-clr-btn;
+    border: 1px solid $clr-btn;
+    background-color: transparent;
+    align-self: flex-end;
+    cursor: pointer;
 
-    &--submit {
-        background-color: #0d3f6c;
-    }
-    
-    &--infos {
-        background-color: lighten(#028383, 8%);
-    }
-
-    &--delete {
-        background-color: lighten(#ff8282, 2%);
+    &:hover{
+        color: $font-clr-btn-hover;
+        background-color: $clr-hover-btn;
     }
 }

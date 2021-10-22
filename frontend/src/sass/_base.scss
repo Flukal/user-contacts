@@ -1,0 +1,24 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html { // This define 1rem = 10px
+    font-size: 62.5%;
+    min-height: 100%;
+    background-color: $clr-background;
+}
+
+body {
+    box-sizing: border-box;
+    color: $font-clr;
+    font-family: $font-family;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+}
