@@ -1,3 +1,5 @@
+@charset 'UTF-8';
+
 @import './variables';
 @import './base';
 
@@ -33,7 +35,6 @@ nav {
     padding: 2rem;
     background-color: $clr-background;
     border-radius: 3px;
-    // box-shadow: 1px 1px 6px 0px #646464;
 
     &__create {
         display: flex;
@@ -80,7 +81,6 @@ nav {
     height: 50px;
     width: 50px;
     border-radius: 50%;
-    background-color: #e3e2e2;
 }
 
 .contacts__infos {
@@ -116,7 +116,7 @@ nav {
     background-color: transparent;
     border: none;
     display: flex;
-    align-items: end;
+    align-items: flex-end;
     gap: .5rem;
     padding: .7rem 0;
     cursor: pointer;

@@ -58,12 +58,12 @@ class ContactList extends Component {
                 {contacts.map(contact =>
                     <ul key={contact.id} className="contacts__list">
                         <li className="contacts__user">
-                            <img src="" alt="image" className="contacts__thumb" />
+                            <img src={`http://localhost:3000/assets/images/${contact.image}`} alt={`${contact.name} ${contact.lastName}`} className="contacts__thumb" />
                             <h3>{contact.name} {contact.lastName}</h3> 
                             <div className="contacts__details">
                                 <button className="link" type="button" onClick={() => this.showInfos(contact.id)}><BiDetail /> Infos</button>
-                                <a className="link" type="button" onClick={() => this.showModify(contact.id)}><BiEdit /> Edit</a>
-                                <a className="link" type="button" onClick={(e) => this.handleDelete(contact.id, e)}><BiTrash /> Delete</a>
+                                <button className="link" type="button" onClick={() => this.showModify(contact.id)}><BiEdit /> Edit</button>
+                                <button className="link" type="button" onClick={(e) => this.handleDelete(contact.id, e)}><BiTrash /> Delete</button>
                             </div>
                         </li>
                         <ContactInfos isBoxVisible={contact.id === this.state.visibleInfo} contact={contact} />

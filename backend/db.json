@@ -6,7 +6,7 @@
       "age": 20,
       "phone": "01836352712",
       "email": "alex.phil@g.com",
-      "image": "alex.jpg",
+      "image": "alex.jpeg",
       "site": "alex.phil.com",
       "tags": "Music, Sport, Dance",
       "id": 100
@@ -17,7 +17,7 @@
       "age": 28,
       "phone": "01236345712",
       "email": "pep.gun@m.com",
-      "image": "pep.jpg",
+      "image": "pep.jpeg",
       "site": "pepgun.com",
       "tags": "Tennis, Bowling, Football",
       "id": 101
@@ -28,10 +28,21 @@
       "age": 35,
       "phone": "01219545927",
       "email": "mark.ling@m.com",
-      "image": "mark.jpg",
+      "image": "mark.jpeg",
       "site": "markling.com",
       "tags": "Ping Pong, Volleyball, Bike",
       "id": 102
+    },
+    {
+      "name": "Melany",
+      "lastName": "Lynch",
+      "age": "47",
+      "phone": "02719836846",
+      "email": "melany.ly@l.com",
+      "image": "alex.jpeg",
+      "site": "melany.ly.com",
+      "tags": "Rugby, Badminton, Darts",
+      "id": 103
     }
   ]
 }

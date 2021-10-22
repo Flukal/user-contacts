@@ -46,7 +46,7 @@ class ContactForm extends Component {
                     className="form__input" 
                     type="text"
                     name="name"
-                    value={name}
+                    defaultValue={name}
                     onChange={this.handleChange} 
                 />
                 </div>
@@ -56,7 +56,7 @@ class ContactForm extends Component {
                     className="form__input" 
                     type="text"
                     name="lastName"
-                    value={lastName}
+                    defaultValue={lastName}
                     onChange={this.handleChange} 
                 />
                 </div>
@@ -66,7 +66,7 @@ class ContactForm extends Component {
                     className="form__input" 
                     type="text"
                     name="age"
-                    value={age}
+                    defaultValue={age}
                     onChange={this.handleChange} 
                 />
                 </div>
@@ -76,7 +76,7 @@ class ContactForm extends Component {
                     className="form__input" 
                     type="number"
                     name="phone"
-                    value={phone}
+                    defaultValue={phone}
                     onChange={this.handleChange} 
                 />
                 </div>
@@ -86,7 +86,7 @@ class ContactForm extends Component {
                     className="form__input" 
                     type="email"
                     name="email"
-                    value={email}
+                    defaultValue={email}
                     onChange={this.handleChange} 
                 />
                 </div>
@@ -96,8 +96,7 @@ class ContactForm extends Component {
                     className="form__input" 
                     type="file"
                     name="image"
-                    alt={name}
-                    value={image}
+                    defaultValue={image}
                     onChange={this.handleChange} 
                     />
                 </div>
@@ -107,7 +106,7 @@ class ContactForm extends Component {
                     className="form__input" 
                     type="text"
                     name="site"
-                    value={site}
+                    defaultValue={site}
                     onChange={this.handleChange} 
                     />
                 </div>
@@ -117,7 +116,7 @@ class ContactForm extends Component {
                     className="form__input" 
                     type="text"
                     name="tags"
-                    value={tags}
+                    defaultValue={tags}
                     onChange={this.handleChange} 
                     />
                 </div>
