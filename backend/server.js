@@ -5,6 +5,7 @@ const cors = require('cors');
 const app = express();
 
 app.use(cors());
+// app.use('*/images',express.static('/public'));
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {

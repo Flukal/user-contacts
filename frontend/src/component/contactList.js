@@ -22,6 +22,16 @@ class ContactList extends Component {
         }).catch(err => {
             console.log(err)
         })
+        
+        // axios.get(`http://localhost:3006/public`)
+        // .then(res => {
+        //     this.setState({ 
+        //         images: res.data 
+        //     });
+        //     console.log(res.data)
+        // }).catch(err => {
+        //     console.log(err)
+        // })
     }
 
     handleDelete = (id, e) => {
@@ -71,7 +81,7 @@ class ContactList extends Component {
                 {contacts.map(contact =>
                     <ul key={contact.id} className="contacts__list">
                         <li className="contacts__user">
-                            <img src={`http://localhost:3000/assets/images/${contact.image}`} alt={`${contact.name} ${contact.lastName}`} className="contacts__thumb" />
+                            <img src={`http://localhost:3006/public/${contact.imgName}`} alt={`${contact.name} ${contact.lastName}`} className="contacts__thumb" />
                             <h3>{contact.name} {contact.lastName}</h3> 
                             <div className="contacts__details">
                                 <button className="link" type="button" onClick={() => this.showInfos(contact.id)}><BiDetail /> Infos</button>
