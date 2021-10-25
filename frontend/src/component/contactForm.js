@@ -16,8 +16,10 @@ class ContactForm extends Component {
             tags: ''
         }
     }
+    
 
     handleChange = (e) => {
+        console.log(e.target.files)
         this.setState({
             [e.target.name] : e.target.value
         })  
@@ -31,6 +33,18 @@ class ContactForm extends Component {
         })
         .catch(err => {
             console.log(err)
+        })
+
+        const data = new FormData()
+
+        data.append('file', this.state.image)
+
+        axios.post('http://localhost:8000/upload', data)
+        .then((e) => {
+            console.log('Success')
+        })
+        .catch((e) => {
+            console.error('Error', e)
         })
     }
     
