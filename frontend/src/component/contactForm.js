@@ -13,15 +13,17 @@ class ContactForm extends Component {
             email: '',
             image: '',
             site: '',
-            tags: ''
+            tags: '',
+            imgName: ''
         }
     }
-    
 
     handleChange = (e) => {
-        console.log(e.target.files)
+        // console.log("targetImage: " + e.target.files[0])
         this.setState({
-            [e.target.name] : e.target.value
+            [e.target.name] : e.target.value,
+            image: e.target.files[0],
+            imgName: e.target.files[0].name
         })  
     }
 
@@ -37,7 +39,7 @@ class ContactForm extends Component {
 
         const data = new FormData()
 
-        data.append('file', this.state.image)
+        data.append('file', this.state.image, this.state.imgName)
 
         axios.post('http://localhost:8000/upload', data)
         .then((e) => {

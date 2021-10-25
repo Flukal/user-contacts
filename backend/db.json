@@ -45,48 +45,16 @@
       "id": 103
     },
     {
-      "name": "A",
-      "lastName": "V",
-      "age": "32",
-      "phone": "342432",
-      "email": "f@g.com",
-      "image": "C:\\fakepath\\alex.jpg",
-      "site": "q.com",
-      "tags": "d",
+      "name": "",
+      "lastName": "",
+      "age": "",
+      "phone": "",
+      "email": "",
+      "image": {},
+      "site": "",
+      "tags": "",
+      "imgName": "alex.jpg",
       "id": 104
-    },
-    {
-      "name": "",
-      "lastName": "",
-      "age": "",
-      "phone": "",
-      "email": "",
-      "image": "C:\\fakepath\\DesktopV1.png",
-      "site": "",
-      "tags": "",
-      "id": 105
-    },
-    {
-      "name": "",
-      "lastName": "",
-      "age": "",
-      "phone": "",
-      "email": "",
-      "image": "C:\\fakepath\\alex.jpg",
-      "site": "",
-      "tags": "",
-      "id": 106
-    },
-    {
-      "name": "",
-      "lastName": "",
-      "age": "",
-      "phone": "",
-      "email": "",
-      "image": "C:\\fakepath\\alex.jpg",
-      "site": "",
-      "tags": "",
-      "id": 107
     }
   ]
 }
