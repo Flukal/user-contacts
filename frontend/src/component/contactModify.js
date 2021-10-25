@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import { BiPlus } from 'react-icons/bi';
 
 class ContactModify extends Component {
     constructor(props) {
@@ -35,6 +36,7 @@ class ContactModify extends Component {
 
         return (
             <form onSubmit={(id) => {this.handleSubmit(id)}} className={`form ${this.props.isBoxVisible ? "form--show" : ""}`}>
+                <button className="link link__close" onClick={(e) => {this.props.closeModify(e)}}><BiPlus /></button>
                 <div className="form__box">
                     <label>Name</label>
                     <input 

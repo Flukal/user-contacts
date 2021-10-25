@@ -49,6 +49,19 @@ class ContactList extends Component {
         });
     }
 
+    closeModify = (e) => {
+        e.preventDefault()
+        this.setState({ 
+            visibleModify: ''
+        });
+    }
+
+    closeInfo = (e) => {
+        e.preventDefault()
+        this.setState({ 
+            visibleInfo: '',
+        });
+    }
 
     render() {
         const {contacts} = this.state
@@ -66,8 +79,8 @@ class ContactList extends Component {
                                 <button className="link" type="button" onClick={(e) => this.handleDelete(contact.id, e)}><BiTrash /> Delete</button>
                             </div>
                         </li>
-                        <ContactInfos isBoxVisible={contact.id === this.state.visibleInfo} contact={contact} />
-                        <ContactModify isBoxVisible={contact.id === this.state.visibleModify} contact={contact} />
+                        <ContactInfos isBoxVisible={contact.id === this.state.visibleInfo} contact={contact} closeInfo={(e) => this.closeInfo(e)} />
+                        <ContactModify isBoxVisible={contact.id === this.state.visibleModify} contact={contact} closeModify={(e) => this.closeModify(e)} />
                     </ul>
                 )}
             </div>

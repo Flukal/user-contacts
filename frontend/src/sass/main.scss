@@ -35,6 +35,7 @@ nav {
     padding: 2rem;
     background-color: $clr-background;
     border-radius: 3px;
+    position: relative;
 
     &__create {
         display: flex;
@@ -89,6 +90,7 @@ nav {
     grid-gap: 2rem 4rem;
     padding: 2rem;
     padding-bottom: 1rem;
+    position: relative;
 
     &--show {
         display: grid;
@@ -120,6 +122,17 @@ nav {
     gap: .5rem;
     padding: .7rem 0;
     cursor: pointer;
+
+    &__close {
+        position: absolute;
+        top: 0;
+        right: 15px;
+
+        svg {
+            transform: rotate(45deg);
+            font-size: 2.3rem;
+        }
+    }
 
     svg {
         fill: $clr-icons;
