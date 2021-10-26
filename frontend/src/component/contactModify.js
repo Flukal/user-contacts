@@ -7,21 +7,26 @@ class ContactModify extends Component {
         super(props)
     
         this.state = {
-            name: '',
-            lastName: '',
-            age: '',
-            phone: '',
-            email: '',
+            name: this.props.contact.name,
+            lastName: this.props.contact.lastName,
+            age: this.props.contact.age,
+            phone: this.props.contact.phone,
+            email: this.props.contact.email,
             image: '',
-            site: '',
-            tags: '',
-            id: ''
+            site: this.props.contact.site,
+            tags: this.props.contact.tags
         }
+    }
 
+    handleChange = (e) => {
+        this.setState({
+            [e.target.name] : e.target.value
+        })  
     }
     
     handleSubmit = (id, e) => {
         e.preventDefault()
+
         axios.put(`http://localhost:3006/contacts/${id}`, this.state)
         .then(res => {
             console.log(res)
@@ -31,11 +36,12 @@ class ContactModify extends Component {
     }
     
     render() {
-        const {name, lastName, age, phone, email, image, site, tags, id} = this.state
-        const contactPlaceholder = this.props.contact
+        const {name, lastName, age, phone, email, image, site, tags} = this.state
+        // const contactPlaceholder = this.props.contact
+        const propsId = this.props.contact.id
 
         return (
-            <form onSubmit={(id) => {this.handleSubmit(id)}} className={`form ${this.props.isBoxVisible ? "form--show" : ""}`}>
+            <form onSubmit={(e) => {this.handleSubmit(propsId, e)}} className={`form ${this.props.isBoxVisible ? "form--show" : ""}`}>
                 <button className="link link__close" onClick={(e) => {this.props.closeModify(e)}}><BiPlus /></button>
                 <div className="form__box">
                     <label>Name </label>
@@ -43,8 +49,8 @@ class ContactModify extends Component {
                     className="form__label"
                     type="text"
                     name="name"
-                    placeholder={contactPlaceholder.name}
                     defaultValue={name}
+                    onChange={this.handleChange} 
                     />
                 </div>
                 <div className="form__box">
@@ -53,8 +59,8 @@ class ContactModify extends Component {
                     className="form__label"
                     type="text"
                     name="lastName"
-                    placeholder={contactPlaceholder.lastName}
                     defaultValue={lastName}
+                    onChange={this.handleChange} 
                     />
                 </div>
                 <div className="form__box">
@@ -63,8 +69,8 @@ class ContactModify extends Component {
                     className="form__label"
                     type="text"
                     name="age"
-                    placeholder={contactPlaceholder.age}
                     defaultValue={age}
+                    onChange={this.handleChange} 
                     />
                 </div>
                 <div className="form__box">
@@ -73,8 +79,8 @@ class ContactModify extends Component {
                     className="form__label"
                     type="number"
                     name="phone"
-                    placeholder={contactPlaceholder.phone}
                     defaultValue={phone}
+                    onChange={this.handleChange} 
                     />
                 </div>
                 <div className="form__box">
@@ -83,8 +89,8 @@ class ContactModify extends Component {
                     className="form__label"
                     type="email"
                     name="email"
-                    placeholder={contactPlaceholder.email}
                     defaultValue={email}
+                    onChange={this.handleChange} 
                     />
                 </div>
                 <div className="form__box">
@@ -95,6 +101,7 @@ class ContactModify extends Component {
                     name="image"
                     alt={`${name} ${lastName}`}
                     defaultValue={image}
+                    onChange={this.handleChange} 
                     />
                 </div>
                 <div className="form__box">
@@ -103,8 +110,8 @@ class ContactModify extends Component {
                     className="form__label"
                     type="text"
                     name="site"
-                    placeholder={contactPlaceholder.site}
                     defaultValue={site}
+                    onChange={this.handleChange} 
                     />
                 </div>
                 <div className="form__box">
@@ -113,8 +120,8 @@ class ContactModify extends Component {
                     className="form__label"
                     type="text"
                     name="tags"
-                    placeholder={contactPlaceholder.tags}
                     defaultValue={tags}
+                    onChange={this.handleChange} 
                     />
                 </div>
                 <div className="form__box">
