@@ -11,7 +11,7 @@
     "nodemon": "^2.0.14"
   },
   "scripts": {
-    "start": "json-server -p 3006 -w db.json & npx nodemon server.js"
+    "start": "json-server -p 3001 -w db.json"
   },
   "author": "",
   "license": "ISC"
