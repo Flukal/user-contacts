@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+// import { Image } from 'cloudinary-react'
 
 class ContactForm extends Component {
     constructor(props) {
@@ -12,17 +13,33 @@ class ContactForm extends Component {
             phone: '',
             email: '',
             image: '',
+            // imagePath: '',
             site: '',
             tags: ''
         }
     }
 
     handleChange = (e) => {
-        // console.log("targetImage: " + e.target.files[0])
         this.setState({
-            [e.target.name] : e.target.value,
-            image: e.target.files[0]
+            [e.target.name] : e.target.value
         })  
+    }
+
+    handleImage = async (e) => {
+        const image = e.target.files[0]
+        const data = new FormData()
+
+        data.append('file', image)
+        data.append('upload_preset', 'cfktotfs1')
+
+        const res = await axios.post('https://api.cloudinary.com/v1_1/dvj3eleh5/image/upload', data)
+        console.log(res.data)
+
+        this.setState({
+            image: res.data.public_id
+        })
+
+        console.log("this.state: " + this.state.image)
     }
 
     handleSubmit = (e) => {
@@ -35,17 +52,19 @@ class ContactForm extends Component {
             console.log(err)
         })
 
-        const data = new FormData()
-        console.log(this.state.image)
-        data.append('file', this.state.image)
+        // const imageData = new FormData()
+        // console.log('appendState: ' + this.state.image)
+        
+        // imageData.append('file', this.state.image)
+        // imageData.append('upload_preset', 'cfktotfs1')
 
-        axios.post('http://localhost:8000/upload', data)
-        .then((e) => {
-            console.log('Success')
-        })
-        .catch((e) => {
-            console.error('Error', e)
-        })
+        // axios.post('https://api.cloudinary.com/v1_1/dvj3eleh5/image/upload', imageData)
+        // .then((res) => {
+        //     console.log(res)
+        // })
+        // .catch((e) => {
+        //     console.error('Error', e)
+        // })
     }
     
     render() {
@@ -111,7 +130,7 @@ class ContactForm extends Component {
                     type="file"
                     name="image"
                     defaultValue={image}
-                    onChange={this.handleChange} 
+                    onChange={this.handleImage} 
                     />
                 </div>
                 <div className="form__box">

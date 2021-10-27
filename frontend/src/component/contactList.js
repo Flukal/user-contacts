@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import axios from "axios"
 import { BiDetail, BiEdit, BiTrash } from 'react-icons/bi';
+import { Image } from 'cloudinary-react'
 import ContactInfos from './contactInfos'
 import ContactModify from './contactModify'
-
 
 class ContactList extends Component {
     state = {
@@ -22,16 +22,6 @@ class ContactList extends Component {
         }).catch(err => {
             console.log(err)
         })
-        
-        // axios.get(`http://localhost:3006/public`)
-        // .then(res => {
-        //     this.setState({ 
-        //         images: res.data 
-        //     });
-        //     console.log(res.data)
-        // }).catch(err => {
-        //     console.log(err)
-        // })
     }
 
     handleDelete = (id, e) => {
@@ -75,13 +65,20 @@ class ContactList extends Component {
 
     render() {
         const {contacts} = this.state
+        console.log(contacts.image)
         
         return (
             <div className="contacts">
                 {contacts.map(contact =>
                     <ul key={contact.id} className="contacts__list">
                         <li className="contacts__user">
-                            <img src={`http://localhost:3006/public/${contact.imgName}`} alt={`${contact.name} ${contact.lastName}`} className="contacts__thumb" />
+                            <Image 
+                            className="contacts__thumb"
+                            alt={`${contact.name} ${contact.lastName}`}
+                            cloudName="dvj3eleh5"
+                            publicId={contact.image}
+                            style={{width: 50}}
+                            />
                             <h3>{contact.name} {contact.lastName}</h3> 
                             <div className="contacts__details">
                                 <button className="link" type="button" onClick={() => this.showInfos(contact.id)}><BiDetail /> Infos</button>
@@ -93,6 +90,8 @@ class ContactList extends Component {
                         <ContactModify isBoxVisible={contact.id === this.state.visibleModify} contact={contact} closeModify={(e) => this.closeModify(e)} />
                     </ul>
                 )}
+
+                <Image />
             </div>
         )
     }
