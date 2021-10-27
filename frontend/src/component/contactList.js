@@ -65,7 +65,7 @@ class ContactList extends Component {
 
     render() {
         const {contacts} = this.state
-        console.log(contacts.image)
+        
         
         return (
             <div className="contacts">

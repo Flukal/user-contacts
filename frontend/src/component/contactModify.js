@@ -50,6 +50,8 @@ class ContactModify extends Component {
         }).catch(err => {
             console.log(err)
         })
+
+        console.log(this.state.contacts)
     }
     
     render() {
@@ -61,7 +63,7 @@ class ContactModify extends Component {
             <form onSubmit={(e) => {this.handleSubmit(propsId, e)}} className={`form ${this.props.isBoxVisible ? "form--show" : ""}`}>
                 <button className="link link__close" onClick={(e) => {this.props.closeModify(e)}}><BiPlus /></button>
                 <div className="form__box">
-                    <label>Image</label>
+                    <label>Change image</label>
                     <input 
                     className="form__label"
                     type="file"

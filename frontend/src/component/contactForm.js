@@ -51,20 +51,6 @@ class ContactForm extends Component {
         .catch(err => {
             console.log(err)
         })
-
-        // const imageData = new FormData()
-        // console.log('appendState: ' + this.state.image)
-        
-        // imageData.append('file', this.state.image)
-        // imageData.append('upload_preset', 'cfktotfs1')
-
-        // axios.post('https://api.cloudinary.com/v1_1/dvj3eleh5/image/upload', imageData)
-        // .then((res) => {
-        //     console.log(res)
-        // })
-        // .catch((e) => {
-        //     console.error('Error', e)
-        // })
     }
     
     render() {
