@@ -43,7 +43,7 @@ class ContactForm extends Component {
     }
 
     handleSubmit = (e) => {
-        e.preventDefault()
+        // e.preventDefault()
         axios.post(`http://localhost:3006/contacts`, this.state)
         .then(res => {
             console.log(res)
@@ -73,6 +73,16 @@ class ContactForm extends Component {
         return (
             <form onSubmit={this.handleSubmit} className="form form__create">
                 <h1 className="form__title">Create Contact</h1>
+                <div className="form__box">
+                    <label className="form__label">Image</label>
+                    <input
+                    className="form__input" 
+                    type="file"
+                    name="image"
+                    defaultValue={image}
+                    onChange={this.handleImage} 
+                    />
+                </div>
                 <div className="form__box">
                     <label className="form__label">Name</label>
                     <input
@@ -122,16 +132,6 @@ class ContactForm extends Component {
                     defaultValue={email}
                     onChange={this.handleChange} 
                 />
-                </div>
-                <div className="form__box">
-                    <label className="form__label">Image</label>
-                    <input
-                    className="form__input" 
-                    type="file"
-                    name="image"
-                    defaultValue={image}
-                    onChange={this.handleImage} 
-                    />
                 </div>
                 <div className="form__box">
                     <label className="form__label">Site</label>

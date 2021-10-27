@@ -23,6 +23,23 @@ class ContactModify extends Component {
             [e.target.name] : e.target.value
         })  
     }
+
+    handleImage = async (e) => {
+        const image = e.target.files[0]
+        const data = new FormData()
+
+        data.append('file', image)
+        data.append('upload_preset', 'cfktotfs1')
+
+        const res = await axios.post('https://api.cloudinary.com/v1_1/dvj3eleh5/image/upload', data)
+        console.log(res.data)
+
+        this.setState({
+            image: res.data.public_id
+        })
+
+        console.log("this.state: " + this.state.image)
+    }
     
     handleSubmit = (id, e) => {
         e.preventDefault()
@@ -43,6 +60,17 @@ class ContactModify extends Component {
         return (
             <form onSubmit={(e) => {this.handleSubmit(propsId, e)}} className={`form ${this.props.isBoxVisible ? "form--show" : ""}`}>
                 <button className="link link__close" onClick={(e) => {this.props.closeModify(e)}}><BiPlus /></button>
+                <div className="form__box">
+                    <label>Image</label>
+                    <input 
+                    className="form__label"
+                    type="file"
+                    name="image"
+                    alt={`${name} ${lastName}`}
+                    defaultValue={image}
+                    onChange={this.handleImage} 
+                    />
+                </div>
                 <div className="form__box">
                     <label>Name </label>
                     <input 
@@ -90,17 +118,6 @@ class ContactModify extends Component {
                     type="email"
                     name="email"
                     defaultValue={email}
-                    onChange={this.handleChange} 
-                    />
-                </div>
-                <div className="form__box">
-                    <label>Image</label>
-                    <input 
-                    className="form__label"
-                    type="file"
-                    name="image"
-                    alt={`${name} ${lastName}`}
-                    defaultValue={image}
                     onChange={this.handleChange} 
                     />
                 </div>
