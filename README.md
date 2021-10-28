@@ -32,6 +32,9 @@ Go to frontend: <br>
 Start the app <br>
 <code>npm start</code> 
 
+Open http://localhost:3000 to view it in the browser.
+
+
 Open a new terminal tab and go to backend:
 <code>cd backend</code> <br>
 
@@ -39,3 +42,5 @@ Open a new terminal tab and go to backend:
 
 Start the backend<br>
 <code>npm start</code> 
+
+Open http://localhost:3001/ to view the backend page or go to http://localhost:3001/contacts to check the backend list.
