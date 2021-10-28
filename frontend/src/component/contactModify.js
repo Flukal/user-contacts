@@ -61,7 +61,7 @@ class ContactModify extends Component {
 
         return (
             <form onSubmit={(e) => {this.handleSubmit(propsId, e)}} className={`form ${this.props.isBoxVisible ? "form--show" : ""}`}>
-                <button className="link link__close" onClick={(e) => {this.props.closeModify(e)}}><BiPlus /></button>
+                <button className="btn btn__close" onClick={(e) => {this.props.closeModify(e)}}><BiPlus /></button>
                 <div className="form__box">
                     <label>Change image</label>
                     <input 
@@ -144,7 +144,7 @@ class ContactModify extends Component {
                     />
                 </div>
                 <div className="form__box">
-                    <button className="btn" type="submit">Save</button>
+                    <button className="btn btn__submit" type="submit">Save</button>
                 </div>
             </form>
         )

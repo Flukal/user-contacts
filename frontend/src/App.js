@@ -10,6 +10,8 @@ class App extends Component {
         <nav>User Contacts</nav>
         <main>
           <ContactForm />
+
+          <h3>Contact List</h3>
           <ContactList />
         </main>
       </div>

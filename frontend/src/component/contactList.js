@@ -81,9 +81,9 @@ class ContactList extends Component {
                             />
                             <h3>{contact.name} {contact.lastName}</h3> 
                             <div className="contacts__details">
-                                <button className="link" type="button" onClick={() => this.showInfos(contact.id)}><BiDetail /> Infos</button>
-                                <button className="link" type="button" onClick={() => this.showModify(contact.id)}><BiEdit /> Edit</button>
-                                <button className="link" type="button" onClick={(e) => this.handleDelete(contact.id, e)}><BiTrash /> Delete</button>
+                                <button className="btn btn__icon" type="button" onClick={() => this.showInfos(contact.id)}><BiDetail /> <span>Infos</span></button>
+                                <button className="btn btn__icon" type="button" onClick={() => this.showModify(contact.id)}><BiEdit /> <span>Edit</span></button>
+                                <button className="btn btn__icon" type="button" onClick={(e) => this.handleDelete(contact.id, e)}><BiTrash /> <span>Delete</span></button>
                             </div>
                         </li>
                         <ContactInfos isBoxVisible={contact.id === this.state.visibleInfo} contact={contact} closeInfo={(e) => this.closeInfo(e)} />

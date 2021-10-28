@@ -1,0 +1,36 @@
+.contacts {
+    padding: 2rem 0;
+}
+
+.contacts__list {
+    margin-bottom: 2rem;
+    border-radius: 3px;
+}
+
+.contacts__user {
+    height: 70px;
+    border: 2px solid $clr-border;
+}
+
+.contacts__thumb {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.contacts__infos {
+    position: relative;
+
+    &--show {
+        border: 2px solid $clr-border;
+        border-top: none;
+    }
+
+    b {
+        color: $font-clr-title;
+    }
+
+    a {
+        color: $font-clr-link;
+    }
+}

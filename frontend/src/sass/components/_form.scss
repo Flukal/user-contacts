@@ -1,0 +1,14 @@
+.form {
+    background-color: $clr-background;
+    border-radius: 3px;
+    position: relative;
+
+    &__create {
+        border: 2px solid $clr-border;
+    }
+
+    &--show {
+        border: 2px solid #2d455e;
+        border-top: none;
+    }
+}

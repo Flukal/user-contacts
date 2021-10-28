@@ -140,7 +140,7 @@ class ContactForm extends Component {
                     />
                 </div>
                 <div className="form__box">
-                    <button className="btn btn--submit" type="submit">Submit</button>
+                    <button className="btn btn__submit" type="submit">Submit</button>
                 </div>
             </form>
         )

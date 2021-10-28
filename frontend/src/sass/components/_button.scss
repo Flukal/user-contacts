@@ -1,0 +1,46 @@
+.btn {
+    color: $font-clr-btn;
+    border: 1px solid $clr-btn;
+    background-color: transparent;
+    cursor: pointer;    
+}
+
+.btn__submit {
+    height: 30px;
+    width: 75px;
+
+    &:hover{
+        color: $font-clr-btn-hover;
+        background-color: $clr-hover-btn;
+    }
+}
+
+.btn__icon {
+    color: inherit;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    span {
+        @media screen and (max-width:600px) {
+            display: none;
+        }
+    }
+
+    svg {
+        fill: $clr-icons;
+        font-size: 1.5rem;
+    }
+}
+
+.btn__close {
+    border: none;
+    position: absolute;
+    top: 0;
+    right: 15px;
+
+    svg {
+        transform: rotate(45deg);
+        font-size: 2.3rem;
+    }
+}
