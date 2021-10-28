@@ -18,8 +18,10 @@ class ContactList extends Component {
             this.setState({ 
                 contacts: res.data 
             });
+
             console.log(res.data)
-        }).catch(err => {
+        })
+        .catch(err => {
             console.log(err)
         })
     }
@@ -32,6 +34,9 @@ class ContactList extends Component {
 
             const contacts = this.state.contacts.filter(contact => contact.id !== id);  
             this.setState({ contacts });  
+        })
+        .catch(err => {
+            console.log(err)
         })
     }
 

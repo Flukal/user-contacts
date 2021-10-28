@@ -13,7 +13,6 @@ class ContactForm extends Component {
             phone: '',
             email: '',
             image: '',
-            // imagePath: '',
             site: '',
             tags: ''
         }
@@ -25,6 +24,7 @@ class ContactForm extends Component {
         })  
     }
 
+    // This handleImage save the picture when got selected and give a path back from cloudinary
     handleImage = async (e) => {
         const image = e.target.files[0]
         const data = new FormData()
@@ -43,7 +43,7 @@ class ContactForm extends Component {
     }
 
     handleSubmit = (e) => {
-        // e.preventDefault()
+        e.preventDefault()
         axios.post(`http://localhost:3006/contacts`, this.state)
         .then(res => {
             console.log(res)
